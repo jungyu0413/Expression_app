@@ -10,7 +10,7 @@ This repository provides a facial expression recognition application that levera
 - Clean PyQt5 GUI with real-time updates
 
 ## Demo Video
-<video src="([https://github.com/user-attachments/assets/afec4345-c458-47d2-ad89-3322116f4dc7](https://github.com/user-attachments/assets/afec4345-c458-47d2-ad89-3322116f4dc7))" controls width="600">
+<video src="https://github.com/user-attachments/assets/afec4345-c458-47d2-ad89-3322116f4dc7" controls width="600">
   Your browser does not support the video tag.
 </video>
 
