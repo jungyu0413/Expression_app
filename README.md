@@ -1,56 +1,55 @@
-# Facial Expression Recognition App
+# Expression Recognition Application
 
-This project provides a PyQt-based application for detecting faces and recognizing facial expressions from various input sources. It supports:
-
-- Live webcam input
-- Single/multiple face images
-- Video file input
-
-The app detects one or more faces in the input, classifies the facial expressions, and visualizes the probability distribution of predicted emotions in real-time.
-
----
-
-## Demo Video
-
-You can preview the demo video here:  
-[▶ Demo Video](https://github.com/user-attachments/assets/1dfa18b7-c0c6-4481-be6f-ad9f7e81ec6f)
-
----
+This repository provides a facial expression recognition application that leverages face detection and emotion classification models. It supports input from single/multiple face images, video files, and real-time webcam streams. The application detects faces and visualizes the probability distribution of predicted expressions.
 
 ## Features
+- Face detection for single and multiple faces
+- Expression recognition with probability visualization
+- Supports image, video, and real-time camera input
+- Auto-close webcam if no face is detected for 10 frames
+- Clean PyQt5 GUI with real-time updates
 
-- Face detection using FaceBoxes
-- Expression recognition using a trained CNN model (`NLA_r18`)
-- Real-time webcam mode
-- Supports multiple faces in image input
-- Expression distribution visualization using progress bars
-- JSON output with predicted expression scores
+## Demo Video
+<video src="https://github.com/user-attachments/assets/1dfa18b7-c0c6-4481-be6f-ad9f7e81ec6f" controls width="600">
+  Your browser does not support the video tag.
+</video>
+
+## File Descriptions
+- `main_live_cam_video.py`: Runs live webcam input for real-time expression recognition. Auto-terminates if no face is detected for 10 consecutive frames.
+- `main_single_face_image_video.py`: Allows user to load an image or video. Detects and analyzes the main face.
+- `main_multi_face_image.py`: Loads a single image and detects expressions for all visible faces.
+
+## Requirements
+- Python (tested with Anaconda 23.7.2)
+- Install all dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+### Run with webcam (real-time)
+```bash
+python main_live_cam_video.py
+```
+- Detects expressions continuously using your system camera.
+- Terminates automatically if no face is detected for 10 frames.
+
+### Run on a single image or video file
+```bash
+python main_single_face_image_video.py
+```
+- Opens a dialog to load a static image or video.
+- Supports face detection and expression recognition on the main face.
+
+### Run on an image with multiple faces
+```bash
+python main_multi_face_image.py
+```
+- Detects and displays expressions for all visible faces in the image.
 
 ---
 
-## Files
-
-| File | Description |
-|------|-------------|
-| `main_live_cam_video.py` | Run facial expression recognition in real-time from webcam input. Automatically exits if no face is detected for 10 consecutive frames. |
-| `main_multi_face_image.py` | Run multi-face detection and expression analysis on a single image. |
-| `main_single_face_image_video.py` | Run single-face expression recognition on a given image or video file. |
-
----
-
-## Setup
-
-### Environment
-
-- Anaconda 23.7.2 recommended
-- Python 3.8+
-- Linux tested (Ubuntu-based systems)
-
-### Installation
-
-1. Clone this repository:
-
-   ```bash
-   git clone https://github.com/your_username/Expression_app.git
-   cd Expression_app
+Feel free to clone the repository, explore the GUI, and customize for your specific use-case.
 
