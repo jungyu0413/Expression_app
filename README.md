@@ -1,35 +1,56 @@
 # Facial Expression Recognition App
 
-This PyQt5-based desktop application performs real-time and offline facial expression recognition using deep learning models. It supports:
+This project provides a PyQt-based application for detecting faces and recognizing facial expressions from various input sources. It supports:
 
-- Real-time webcam input
-- Static image input (single or multiple faces)
-- Video file input (single face)
+- Live webcam input
+- Single/multiple face images
+- Video file input
 
-The app detects faces, predicts expressions, and visualizes the softmax probability distribution of seven emotions with a user-friendly interface.
+The app detects one or more faces in the input, classifies the facial expressions, and visualizes the probability distribution of predicted emotions in real-time.
 
-## Project Structure
+---
+
+## Demo Video
+
+You can preview the demo video here:  
+[▶ Demo Video](https://github.com/user-attachments/assets/1dfa18b7-c0c6-4481-be6f-ad9f7e81ec6f)
+
+---
+
+## Features
+
+- Face detection using FaceBoxes
+- Expression recognition using a trained CNN model (`NLA_r18`)
+- Real-time webcam mode
+- Supports multiple faces in image input
+- Expression distribution visualization using progress bars
+- JSON output with predicted expression scores
+
+---
+
+## Files
 
 | File | Description |
 |------|-------------|
-| `main_live_cam_video.py` | Real-time facial expression recognition using webcam |
-| `main_multi_face_image.py` | Recognizes expressions from multiple faces in an image |
-| `main_single_face_image_video.py` | Recognizes expressions from a single face in an image or video |
+| `main_live_cam_video.py` | Run facial expression recognition in real-time from webcam input. Automatically exits if no face is detected for 10 consecutive frames. |
+| `main_multi_face_image.py` | Run multi-face detection and expression analysis on a single image. |
+| `main_single_face_image_video.py` | Run single-face expression recognition on a given image or video file. |
 
-## Sample Video
+---
 
-You can preview a demo video here:  
-[https://github.com/user-attachments/assets/afec4345-c458-47d2-ad89-3322116f4dc7](https://github.com/user-attachments/assets/afec4345-c458-47d2-ad89-3322116f4dc7)
+## Setup
 
-*(Click to open in browser. GitHub will render the video inline.)*
+### Environment
 
-## Environment
+- Anaconda 23.7.2 recommended
+- Python 3.8+
+- Linux tested (Ubuntu-based systems)
 
-- Python environment: **Anaconda 23.7.2**
-- Dependencies: listed in `requirements.txt`
+### Installation
 
-To install required packages:
+1. Clone this repository:
 
-```bash
-pip install -r requirements.txt
+   ```bash
+   git clone https://github.com/your_username/Expression_app.git
+   cd Expression_app
 
